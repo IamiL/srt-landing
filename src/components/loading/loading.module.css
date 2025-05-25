@@ -1,0 +1,28 @@
+#div {
+    height: 19.5vw;
+    width: 19.5vw;
+    display: grid;
+    grid-template-rows: 19.5vw;
+    grid-template-columns: 19.5vw;
+    /*animation: pulse 2s ease-in-out infinite;*/
+    overflow: hidden;
+    place-items: stretch center;
+}
+
+@media only screen and (max-width: 1366px) {
+    #div {
+        height: 30vw;
+        width: 30vw;
+        grid-template-rows: 30vw;
+        grid-template-columns: 30vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #div {
+        height: 60vw;
+        width: 60vw;
+        grid-template-rows: 60vw;
+        grid-template-columns: 60vw;
+    }
+}

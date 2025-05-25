@@ -1,0 +1,26 @@
+header {
+    width: 93.02vw;
+    margin-top: 1.5625vw;
+    margin-bottom: 2vw;
+    z-index: 3;
+}
+
+.nav_menu {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    display: flex;
+    justify-content: space-between;
+    /*z-index: 10;*/
+}
+
+@media only screen and (max-width: 1366px) {
+    .nav_menu {
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav_menu {
+        align-items: start;
+    }
+}

@@ -1,0 +1,38 @@
+#nav {
+    display: flex;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-inter);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.21;
+    font-style: normal
+}
+
+#nav1 {
+    margin-right: 6.33333333333vw;
+}
+
+#nav2 {
+    margin-right: 5.83333333333vw;
+}
+
+#nav3 {
+    margin-right: 5.83333333333vw;
+}
+
+#nav4 {
+    margin-right: 5.08333333333vw;
+}
+
+
+@media only screen and (max-width: 1366px) {
+
+#nav {
+    display: none;
+}
+
+}

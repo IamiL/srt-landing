@@ -1,0 +1,129 @@
+/*.button {*/
+/*    !*height: 11 vw;*!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*    animation: pulse 2s ease-in-out infinite;*/
+/*    height: 19vw;*/
+/*    width: 19vw;*/
+/*}*/
+
+/*@keyframes pulse {*/
+/*    0% {*/
+/*        opacity: 1;*/
+/*        transform: scale(1)*/
+/*    }*/
+
+/*    50% {*/
+/*        opacity: .9;*/
+/*        transform: scale(1.1)*/
+/*    }*/
+
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: scale(1)*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (max-width: 1366px) {*/
+/*    .button {*/
+/*        height: 30vw;*/
+/*        width: 30vw;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (max-width: 767px) {*/
+/*    .button {*/
+/*        height: 60vw;*/
+/*        width: 60vw;*/
+/*    }*/
+/*}*/
+
+
+/*.power-on {*/
+/*    !*height: 335%;*!*/
+/*    !*width: 335%;*!*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*    fill: none;*/
+/*    stroke: #3E456C;*/
+/*    stroke-width: 9px;*/
+/*    stroke-linecap: round;*/
+/*    stroke-linejoin: round;*/
+/*    transform: rotate(-90deg);*/
+/*}*/
+
+/*.circle {*/
+/*    opacity: 1;*/
+/*    stroke-dasharray: 1696;*/
+/*    animation-name: dashoffset1;*/
+/*    animation-iteration-count: infinite;*/
+/*    animation-duration: 2.1s;*/
+/*    animation-timing-function: linear;*/
+/*    transform-origin: center 50%;*/
+/*}*/
+
+/*@keyframes dashoffset1 {*/
+/*    0% {*/
+/*        stroke-dashoffset: 1696;*/
+/*        transform: rotate(0)*/
+/*    }*/
+
+/*    47.6% {*/
+/*        stroke-dashoffset: 1;*/
+/*        transform: rotate(0)*/
+/*    }*/
+
+
+/*    95.2% {*/
+/*        stroke-dashoffset: 1696;*/
+/*        transform: rotate(360deg)*/
+/*    }*/
+
+/*    100% {*/
+/*        stroke-dashoffset: 1696;*/
+/*        transform: rotate(360deg)*/
+/*    }*/
+/*}*/
+
+
+/*.circle2 {*/
+/*    opacity: 1;*/
+/*    stroke-dasharray: 1351;*/
+/*    animation-name: dashoffset2;*/
+/*    animation-iteration-count: infinite;*/
+/*    animation-duration: 2.1s;*/
+/*    animation-timing-function: linear;*/
+/*    transform-origin: center 50%;*/
+/*}*/
+
+
+/*@keyframes dashoffset2 {*/
+/*    0% {*/
+/*        stroke-dashoffset: 1351;*/
+/*        transform: rotate(-180deg)*/
+/*    }*/
+
+/*    43% {*/
+/*        stroke-dashoffset: 1;*/
+/*        transform: rotate(-180deg)*/
+/*    }*/
+
+/*    50% {*/
+/*        stroke-dashoffset: 1;*/
+/*        transform: rotate(-180deg)*/
+/*    }*/
+
+/*    93% {*/
+/*        stroke-dashoffset: 1351;*/
+/*        transform: rotate(180deg)*/
+/*    }*/
+
+/*    100% {*/
+/*        stroke-dashoffset: 1351;*/
+/*        transform: rotate(180deg)*/
+/*    }*/
+/*}*/

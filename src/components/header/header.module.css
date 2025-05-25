@@ -1,0 +1,50 @@
+#logo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 3.64583333333vw;
+    /*width: 14.0625vw;*/
+    /*margin-left: 0.41666vw;*/
+}
+
+#logo > svg {
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 1366px) {
+
+    /*#lan_btn > svg {*/
+    /*    width: 3.125vw;*/
+    /*    height: 3.125vw;*/
+    /*}*/
+    #logo {
+        height: 5.59895833333vw;
+        grid-column-end: 4;
+    }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+    .lan_btn {
+        display: none;
+    }
+
+    #logo {
+        height: 7.77777777778vw;
+        grid-column-end: 4;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    #logo > img {
+        width: auto;
+    }
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7.777777778vw;
+    }
+}

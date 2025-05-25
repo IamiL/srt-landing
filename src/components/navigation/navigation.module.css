@@ -1,0 +1,234 @@
+#nav {
+    /*width: 60.5729166667vw;*/
+    display: flex;
+    /*margin-left: 9.375vw;*/
+    height: 2vw;
+    justify-content: space-between;
+    width: 54vw;
+}
+
+#nav > a, .navLink {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-inter);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.21;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.navblock {
+    display: grid;
+    grid-template-rows: 2vw auto;
+    flex-direction: column;
+    place-items: end;
+    /*justify-content: end;*/
+    align-items: end;
+    /*margin-right: 6.33333333333vw;*/
+    /*position: relative;*/
+    gap: 0.67708333333vw
+}
+
+.navBlock1 {
+    width: 4vw;
+    overflow: visible;
+    display: flex;
+    justify-content: start;
+}
+
+.navBlock2 {
+    width: 10.9vw;
+    overflow: visible;
+    display: flex;
+    justify-content: start;
+}
+
+.navInternalBlock {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5625vw;
+    background: linear-gradient(180deg, #86A2FF33 20%, #86A2FFCC 80%);
+    /*position: absolute;*/
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /*transform: scaleY(0) translateY(-20vw);*/
+}
+
+/*.navInternalBlock > li */
+
+.navInternalBlock1Wrapper {
+    /*width: 2vw;*/
+    transition: opacity 0.3s 0.1s, transform 0.3s 0.5s;
+    transform-origin: 0 0;
+    opacity: 0;
+    display: flex;
+    justify-content: end;
+    transform: scaleY(0);
+    width: 0;
+}
+
+.navInternalLink {
+    font-family: var(--font-ablation);
+    font-size: 1vw;
+    font-weight: 900;
+    white-space: nowrap;
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: start;*/
+}
+
+.navInternalLink::after, .navInternalBlockElement > .navInternalLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.05208333333vw;
+    background: #FFFFFF;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.4s ease;
+}
+
+.navInternalLink:hover::after, .navInternalBlockElement:hover > .navInternalLink::after {
+    transform: scaleX(1);
+}
+
+.navInternalNavlinkWrapper {
+    /*display: flex;*/
+    gap: 1.25vw;
+    /*height: 0.9375vw;*/
+    height: 1.5vw;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navInternalNavlinkWrapper > div {
+    display: inline-flex;
+    width: 1vw;
+    height: 100%;
+    align-items: center;
+}
+
+/*.navInternalNavlinkWrapper > p {*/
+/*    display: inline-flex;*/
+/*    height: 100%;*/
+/*    align-items: center;*/
+/*}*/
+
+#navInternalBlock1 {
+    /*padding-top: 1vw;*/
+    padding-bottom: 1.85714285714vw;
+    /*padding-left: 1vw;*/
+    padding-right: 1.42857142857vw;
+    /*width: 100vw;*/
+    padding-top: 2.5vw;
+    padding-left: 2vw;
+}
+
+#navInternalBlock2 {
+    padding-top: 2.35714285714vw;
+    padding-left: 1.71428571429vw;
+    padding-right: 1.21428571429vw;
+    padding-bottom: 2vw;
+}
+
+#nav1 {
+    /*width: 3vw;*/
+    height: 100%;
+    /*margin-right: 6.33333333333vw;*/
+    /*height: 2vw;*/
+    /*display: block;*/
+}
+
+.navLink, #nav > a {
+    transition: color 0.3s;
+}
+
+.navblock:hover > .navLink, #nav > a:hover {
+    color: #86A2FF;
+    transition: color 0.3s;
+}
+
+.navblock:hover > .navInternalBlock1Wrapper {
+    /*transform: scaleY(1) translateY(0);*/
+    opacity: 1;
+    transform: scaleY(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/*.navInternalBlock1Wrapper:hover {*/
+/*    opacity: 1;*/
+/*    transform: scaleY(1);*/
+/*}*/
+
+#nav2 {
+    /*width: 6.71875vw;*/
+    /*margin-right: 6.33333333333vw;*/
+}
+
+#nav3 {
+    /*width: 11.7708333333vw;*/
+    /*margin-right: 5.08333333333vw;*/
+}
+
+#nav4 {
+    /*width: 4.1vw;*/
+    /*margin-right: 5.41666666667vw;*/
+}
+
+#nav5 {
+    /*width: 3vw;*/
+    height: 100%;
+    /*width: 4.58333333333vw;*/
+    white-space: nowrap;
+}
+
+#nav5:hover ~ .navInternalBlock1Wrapper {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+@media only screen and (max-width: 1366px) {
+
+    #nav {
+        /*margin-left: 4.296875vw;*/
+        display: none;
+    }
+
+    #nav a {
+        font-size: 1.5625vw;
+    }
+
+    #nav1 {
+        width: auto;
+        margin-right: 2.734375vw;
+    }
+
+    #nav2 {
+        width: auto;
+        margin-right: 2.86458333333vw;
+    }
+
+    #nav3 {
+        width: auto;
+        margin-right: 3.25520833333vw;
+    }
+
+    #nav4 {
+        width: auto;
+        margin-right: 2.86458333333vw;
+    }
+
+    #nav5 {
+        width: 4.58333333333vw;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    #nav {
+        display: none;
+    }
+}

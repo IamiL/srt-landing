@@ -1,0 +1,35 @@
+#div2 {
+    height: 45vw;
+    width: 45vw;
+    /*animation: pulse 2s ease-in-out infinite;*/
+    overflow: hidden;
+    place-items: stretch center;
+}
+
+#load {
+    height: 100%;
+    width: 100%;
+    fill: none;
+    stroke: #3E456C;
+    stroke-width: 1.8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#circle {
+    transform: rotate(-58deg);
+    transform-origin: center 80px;
+    width: 100%;
+    /*stroke-dasharray: 220;*/
+    /*stroke-dashoffset: 40;*/
+}
+
+#svg {
+    margin-top: 8%;
+    width: 75%;
+    height: 73%;
+    z-index: 1;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    align-self: center;
+}

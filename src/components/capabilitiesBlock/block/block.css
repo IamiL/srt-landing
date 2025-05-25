@@ -1,0 +1,32 @@
+#capabilities {
+    margin-top: 11vw;
+}
+
+
+#capabilities > h2 {
+    height: 4.73958333333vw;
+    font-family: var(--font-ablation);
+}
+
+.enLi {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+@media only screen and (max-width: 1366px) {
+    #capabilities {
+        margin-top: 8.07291666667vw;
+    }
+
+    #capabilities > h2 {
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    #capabilities {
+        margin-top: 15.8333333333vw;
+    }
+}

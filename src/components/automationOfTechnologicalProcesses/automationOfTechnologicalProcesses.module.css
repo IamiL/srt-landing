@@ -1,0 +1,81 @@
+#div {
+    margin-top: 5.25vw;
+}
+
+#div > div {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    height: 36.8333333333vw;
+    padding-left: 3.25vw;
+    padding-right: 3.25vw;
+    padding-top: 2vw;
+    gap: 1.75vw;
+}
+
+#div > p {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    text-align: start;
+    margin-top: 0.46875vw;
+}
+
+@media only screen and (max-width: 1366px) {
+    #div {
+        /*height: 54.8177083333vw;*/
+    }
+
+    #div > div {
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        padding-right: 2.60416666667vw;
+        padding-left: 2.60416666667vw;
+    }
+
+    #div > p {
+        grid-column-start: 6;
+        grid-column-end: 13;
+        padding-right: 7.942708333vw;
+    }
+}
+
+#span5 {
+    font-family: var(--font-ablation);
+}
+
+@media only screen and (max-width: 767px) {
+    #div > div {
+        margin-top: unset;
+        padding-top: unset;
+    }
+
+    #div > p {
+        grid-column-start: 1;
+        grid-column-end: 7;
+
+    }
+
+    #div {
+        margin-top: 4vw;
+        height: auto;
+        grid-template-rows: unset;
+        row-gap: unset;
+    }
+
+    #div > div > h4 {
+        margin-top: unset;
+    }
+
+    #div > div > ul {
+        margin-top: 3vw;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+    }
+
+    #div > p {
+        font-size: 3.88888888889vw;
+        padding-left: 12.777777778vw;
+        padding-right: 11.944444444vw;
+        margin-bottom: 7vw;
+    }
+}

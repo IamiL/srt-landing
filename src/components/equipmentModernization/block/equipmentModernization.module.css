@@ -1,0 +1,38 @@
+#div > div {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#div > p {
+    grid-column-start: 6;
+    grid-column-end: -2;
+    text-align: start;
+    width: 45.3125vw;
+}
+
+@media only screen and (max-width: 1366px) {
+    #div > p {
+        grid-column-start: 6;
+        grid-column-end: 12;
+        width: 44.55vw;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    #div > div {
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+
+    #div > p {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        width: 100%;
+        margin-top: 7.777777778vw;
+        font-size: 3.88888888889vw;
+        padding-left: 12.777777778vw;
+        padding-right: 11.944444444vw;
+        font-size: 3.333333333vw;
+    }
+}

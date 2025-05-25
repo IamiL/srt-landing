@@ -1,0 +1,31 @@
+footer {
+    margin-top: 13.5416666667vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 1.33333333333vw;
+    padding-bottom: 1.75vw;
+}
+
+footer::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    /*height: 50.233281493vw;*/
+    /*height: 50.46875vw;*/
+    height: 200vw;
+    width: 100%;
+    background: linear-gradient(180deg, var(--color-gradient-end) 0, var(--color-gradient-start) 15%, var(--color-gradient-start) 100%);
+    border-top-left-radius: 1.875rem;
+    border-top-right-radius: 1.875rem;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        padding-top: 1.91666666667vw;
+        padding-bottom: 4.16666666667vw;
+    }
+}
