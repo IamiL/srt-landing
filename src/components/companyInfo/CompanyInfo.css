@@ -28,3 +28,28 @@
     width: 80%;
     text-align: start;
 }
+
+@media only screen and (max-width: 1366px) {
+    .company_info-block1 {
+        grid-column: 1/7;
+    }
+
+    .company_info-block2 {
+        grid-column: 7/13;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .company_info-block1 {
+        grid-column: 1/-1;
+    }
+
+    .company_info-block2 {
+        grid-column: 1/-1;
+    }
+
+    .company_info-container {
+        gap: 20px;
+    }
+}

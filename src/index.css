@@ -58,7 +58,7 @@ body {
     --first_block: max(calc(calc(100vh - 7.20833vw) / 53.7), 0.75vw);
 }
 
-#root{
+#root {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +129,7 @@ header, main, footer {
 
 h1 {
     font-family: var(--font-ablation);
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: 900;
     line-height: 1.3;
     text-align: left;

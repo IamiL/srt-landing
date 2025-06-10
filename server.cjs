@@ -2,9 +2,9 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
-const FormData = require('form-data');
 const axios = require('axios');
 const formidable = require('formidable');
+const FormData = require('form-data');
 
 const distDir = path.join(__dirname, 'dist');
 
