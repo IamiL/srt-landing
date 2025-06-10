@@ -9,7 +9,7 @@
 
 #ul {
     margin-top: 4.75vw;
-    grid-template-rows: 21.8333333vw 12.4166666667vw 12.4166666667vw;
+    grid-template-rows: 12.4166666667vw 21.8333333vw 12.4166666667vw;
     row-gap: 2.25vw;
 }
 
@@ -19,47 +19,33 @@
     padding-bottom: 2vw;
 }
 
-#li1, #li4 {
-    gap: 2.25vw;
-}
-
-#li2, #li3 {
-    gap: 2.3vw;
-}
-
-#li1, #li2 {
-    padding-top: 2.39583333333vw;
-}
-
-#li3 {
-    padding-top: 2.5vw;
-    padding-left: 0.91666666666vw;
-    padding-right: 0.91666666666vw;
-}
-
-#li4 {
-    padding-top: 2.44791666667vw;
-}
-
-#li5 {
-    padding-top: 4.32291666667vw;
-}
-
-#li6 {
-    padding-top: 4.6875vw;
-}
-
-#li7 {
+#li1, #li7 {
     padding-top: 3.59375vw;
 }
 
-#li8 {
-    padding-top: 3.75vw;
-}
-
-#li9 {
+#li2, #li8, #li9 {
     padding-top: 4.375vw;
 }
+
+#li3 {
+    padding-top: 2.44791666667vw;
+}
+
+#li4 {
+    padding-top: 2.39583333333vw;
+    gap: 2.3vw;
+}
+
+#li5 {
+    padding-top: 2.39583333333vw;
+    gap: 2.25vw;
+}
+
+#li6 {
+    padding-top: 2.5vw;
+    gap: 2.3vw;
+}
+
 
 #li1 {
     grid-column-start: 1;
@@ -94,7 +80,7 @@
 @media only screen and (max-width: 1366px) {
     #ul {
         margin-top: 9.6302083333vw;
-        grid-template-rows: 28.515625vw 16.5364583333vw 16.2760416667vw;
+        grid-template-rows: 16.5364583333vw 28.515625vw 16.2760416667vw;
         row-gap: 2.86458333333vw;
     }
 

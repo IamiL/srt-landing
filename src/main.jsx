@@ -5,8 +5,5 @@ import Csr from "./csr/csr.jsx";
 
 
 createRoot(document.getElementById('root')).render(
-
-  <StrictMode>
-    <Csr />
-  </StrictMode>,
+    <Csr />,
 )

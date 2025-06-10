@@ -12,6 +12,7 @@ export default function Cases({enLan}) {
                 <AutomationOfTechnologicalProcesses enLan={enLan}/>
             </main>
             <Background2/>
+
         </>
     )
 }

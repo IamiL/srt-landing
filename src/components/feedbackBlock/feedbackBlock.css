@@ -1,0 +1,376 @@
+.feedback_block {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin-top: 4.5vw;
+}
+
+.feedback_block-text {
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.feedback_block-form {
+    margin-top: 3vw;
+}
+
+.feedback_block-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.feedback_block-form-grid-element {
+    font-family: var(--font-inter)
+}
+
+.feedback_block-form-grid-element-fullwidth {
+    grid-column: 1 / -1;
+}
+
+.feedback_block-form-grid-element-input_text-error {
+    border-color: rgba(255, 92, 92, 0.5) !important;
+    box-shadow: 0 0 0 3px rgba(255, 92, 92, 0.1) !important;
+}
+
+.feedback_block-form-grid-element-input_text, .feedback_block-form-grid-element-input_textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.feedback_block-form-grid-element-input_text::placeholder,
+.feedback_block-form-grid-element-input_textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.feedback_block-form-grid-element-input_text:focus,
+.feedback_block-form-grid-element-input_textarea:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.feedback_block-form-grid-element-textarea_wrapper {
+    position: relative;
+}
+
+.feedback_block-form-grid-element-input_textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.feedback_block-form-grid-element-input_textarea-char_counter_over_limit {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 12px;
+    /*color: rgba(255, 255, 255, 0.5);*/
+    color: #ff5c5c;
+}
+
+.feedback_block-form-file_upload-sec {
+    margin: 30px 0;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feedback_block-form-file_upload-sec:hover, .feedback_block-form-file_upload-sec-drag-active {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.feedback_block-form-file_upload-sec-file_input {
+    display: none;
+}
+
+.feedback_block-form-file_upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: var(--font-inter);
+}
+
+.feedback_block-form-file_upload-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    transform: translateY(-2px);
+}
+
+.feedback_block-form-file_upload-text {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-family: var(--font-inter);
+}
+
+.feedback_block-form-file_upload-uploaded_files {
+    margin-top: 20px;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-loading {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(66, 165, 245, 0.3);
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(66, 165, 245, 0.1), transparent);
+    animation: uploading-shimmer 1.5s infinite;
+}
+
+@keyframes uploading-shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-loaded {
+    animation: file-upload-complete 0.5s ease-out;
+}
+
+@keyframes file-upload-complete {
+    0% {
+        transform: scale(1.05);
+        background: rgba(76, 175, 80, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-info-group {
+    margin: 0 auto;
+    font-family: var(--font-inter);
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-uploading_indicator {
+    width: 8px;
+    height: 8px;
+    background: #42a5f5;
+    border-radius: 50%;
+    animation: file-pulse 2s infinite;
+    margin-right: 8px;
+}
+
+@keyframes file-pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(66, 165, 245, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(66, 165, 245, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(66, 165, 245, 0);
+    }
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-name {
+    font-weight: 500;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-size {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-status {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-status-loading {
+    color: rgba(66, 165, 245, 0.8);
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-status-loaded {
+    color: rgba(76, 175, 80, 0.8);
+}
+
+
+.feedback_block-form-file_upload-uploaded_files-item-remove {
+    background: rgba(255, 92, 92, 0.2);
+    border: 1px solid rgba(255, 92, 92, 0.3);
+    border-radius: 6px;
+    color: #ff5c5c;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-inter);
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-remove:hover {
+    background: rgba(255, 92, 92, 0.3);
+}
+
+.feedback_block-form-file_upload-uploaded_files-item-remove:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.feedback_block-form-message_container {
+    max-width: unset;
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 1s ease-in-out;
+}
+
+.feedback_block-form-message_container-hidden {
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.feedback_block-form-message {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    font-family: var(--font-inter);
+}
+
+.feedback_block-form-message-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feedback_block-form-message-success {
+    background: rgba(92, 255, 92, 0.15);
+    border: 1px solid rgba(92, 255, 92, 0.3);
+    color: #5cff5c;
+}
+
+.feedback_block-form-message-error {
+    background: rgba(255, 92, 92, 0.15);
+    border: 1px solid rgba(255, 92, 92, 0.3);
+    color: #ff5c5c;
+}
+
+.feedback_block-form-submit_btn {
+    font-family: var(--font-inter);
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #4A5980 0%, #3B4A6B 50%, #2C3A52 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback_block-form-submit_btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback_block-form-submit_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 89, 128, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.feedback_block-form-submit_btn:hover::before {
+    opacity: 1;
+}
+
+.feedback_block-form-submit_btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .feedback_block {
+        padding: 30px 20px;
+    }
+
+    .feedback_block-form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .feedback_block-form-file_upload-sec {
+        padding: 20px 15px;
+    }
+}

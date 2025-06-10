@@ -2,13 +2,13 @@
     margin-top: 12.8333333333vw;
 }
 
-#contacts > div {
+.contacts_block-contacts_list {
     display: flex;
     justify-content: space-between;
     margin-top: 3.5vw;
 }
 
-#contacts > div > p {
+.contacts_block-contacts_list > p {
     text-align: start;
     width: 61.6666666667vw;
 }
@@ -39,23 +39,29 @@
         margin-top: 10.15625vw;
     }
 
-    #contacts > div {
+    .contacts_block-contacts_list {
         margin-top: 4.5vw;
     }
 
-    #contacts > div > p {
+    .contacts_block-contacts_list > p {
         font-size: 1.82291666667vw;
         width: 53vw;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    #contacts > div {
+    .contactsBlock-contactsList-icon {
+        height: 5vw;
+        width: 5vw;
+        margin-right: 0.5vw;
+    }
+
+    .contacts_block-contacts_list {
         flex-direction: column;
         gap: 3vw;
     }
 
-    #contacts > div > p {
+    .contacts_block-contacts_list > p {
         font-size: 3.88888888889vw;
         width: 100%;
     }

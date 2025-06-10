@@ -12,7 +12,11 @@
 
 #ul {
     margin-top: 5.91666666667vw;
-    height: 27.4166666667vw;
+    /*height: 27.4166666667vw;*/
+
+    row-gap: 2.25vw;
+    /*grid-template-rows: 27.4166666667vw 27.4166666667vw;*/
+    grid-template-rows: 29vw 29vw;
 }
 
 .ligrid1 {
@@ -78,9 +82,9 @@
 @media only screen and (max-width: 1366px) {
     #ul {
         margin-top: 5.72916666667vw;
-        height: 70.3125vw;
+        /*height: 70.3125vw;*/
         row-gap: 2.34375vw;
-        grid-template-rows: 33.984375vw 33.984375vw;
+        grid-template-rows: 38vw 36.5vw;
     }
 
     #li1 {
@@ -167,7 +171,7 @@
     }
 
     #ul {
-        grid-template-rows: 75.8333333333vw 58.6111111111vw;
+        grid-template-rows: 82vw 58.6111111111vw 83vw;
         height: auto;
         row-gap: 3.05555555556vw;
         column-gap: 2.5vw;

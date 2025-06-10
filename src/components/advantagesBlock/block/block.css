@@ -5,7 +5,66 @@
     align-items: center;
 }
 
+.advantages-list-item-automation_of_work_processes {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row: 1 / 2;
+}
+
+.advantages-list-item-flexibility_of_use {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row: 1 / 2;
+}
+
+.advantages-list-item-performance {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row: 1 / 2;
+}
+
+.advantages-list-item-cost_effectiveness {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2 / 3;
+}
+
+.advantages-list-item-independence_from_personnel {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row: 2 / 3;
+}
+
 @media only screen and (max-width: 1366px) {
+    .advantages-list-item-automation_of_work_processes {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 1 / 2;
+    }
+
+    .advantages-list-item-flexibility_of_use {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row: 1 / 2;
+    }
+
+    .advantages-list-item-performance {
+        grid-column-start: 9;
+        grid-column-end: 13;
+        grid-row: 1 / 2;
+    }
+
+    .advantages-list-item-cost_effectiveness {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row: 2 / 3;
+    }
+
+    .advantages-list-item-independence_from_personnel {
+        grid-column-start: 9;
+        grid-column-end: 13;
+        grid-row: 2 / 3;
+    }
 
     .adli:before {
         padding: 0.07vw;
@@ -19,6 +78,36 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .advantages-list-item-automation_of_work_processes {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1 / 2;
+    }
+
+    .advantages-list-item-flexibility_of_use {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row: 1 / 2;
+    }
+
+    .advantages-list-item-performance {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 2 / 3;
+    }
+
+    .advantages-list-item-cost_effectiveness {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row: 2 / 3;
+    }
+
+    .advantages-list-item-independence_from_personnel {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 3 / 4;
+    }
+
     .adli:before {
         padding: 0.25vw;
         border-radius: 3.90625vw;

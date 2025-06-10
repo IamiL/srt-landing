@@ -1,0 +1,30 @@
+.company_info {
+    margin-top: 12.8333333333vw;
+}
+
+.company_info-container {
+    margin-top: 3.5vw;
+}
+
+.company_info-block {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.company_info-block1 {
+    grid-column: 2/7;
+}
+
+.company_info-block2 {
+    grid-column: 7/12;
+}
+
+.company_info-p1 {
+    width: 80%;
+    text-align: start;
+}
