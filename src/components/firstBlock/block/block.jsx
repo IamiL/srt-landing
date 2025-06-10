@@ -15,7 +15,7 @@ export default function FirstBlock({enLan}) {
                     <>
                         {/*ИРТ <span*/}
                         {/*id="firstblockheadingspan1">— роботизированные технологии для<br className="brt5"/> автоматизации вашего производства</span>*/}
-                        Автоматизация рабочих процессов на вашем <br />производстве.
+                        Автоматизация рабочих процессов на вашем <br />производстве
                     </>}
         </h1>
         <div id={styles.video}>
