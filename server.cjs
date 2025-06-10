@@ -8,7 +8,7 @@ const FormData = require('form-data');
 
 const distDir = path.join(__dirname, 'dist');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 // Константы для Telegram
 const TELEGRAM_BOT_TOKEN = '8054114971:AAE-25rC6uj0RX8_jafv0Aj6UD-hICbjxSA';
