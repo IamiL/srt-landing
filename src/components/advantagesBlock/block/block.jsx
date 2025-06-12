@@ -3,7 +3,10 @@ import "./block.css"
 
 export default function AdvantagesBlock({enLan}) {
     return <section id="advantages">
-        <h2 id={styles.h2}>{enLan ? 'Our Advantages' : 'Наши преимущества'}</h2>
+        <h2
+                id={styles.h2}
+                className='advantages_block-main_heading'
+        >{enLan ? 'Our Advantages' : 'Наши преимущества'}</h2>
         <p
                 className="text2"
                 id={styles.p1}

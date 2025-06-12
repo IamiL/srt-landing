@@ -1,5 +1,6 @@
 import styles from "./block.module.css"
 import "./block.css"
+import {Link} from "react-router-dom";
 
 export default function CapabilitiesBlock({enLan}) {
 
@@ -9,20 +10,20 @@ export default function CapabilitiesBlock({enLan}) {
                 className="base_grid"
                 id={styles.ul}
         >
-            <a
-                    href={`#automation`}
+            <Link
+                    to={`/cases#automation`}
                     id={styles.li1}
                     className={`adli  ${enLan ? 'enLi' : ""}`}
             >
                 <h3 className="head1">{enLan ? 'Automation of Technological Processes' : 'Автоматизация технологических процессов'}</h3>
-            </a>
-            <a
-                    href={`#modernization`}
+            </Link>
+            <Link
+                    to={`/cases#modernization`}
                     id={styles.li2}
                     className={`adli  ${enLan ? 'enLi' : ""}`}
             >
                 <h3 className="head1">{enLan ? 'Equipment Modernization' : 'Модернизация оборудования'}</h3>
-            </a>
+            </Link>
             <li
                     id={styles.li3}
                     className={`adli  ${enLan ? 'enLi' : ""}`}
@@ -45,8 +46,6 @@ export default function CapabilitiesBlock({enLan}) {
                             компоненты для
                             интеграции в ваш рабочий<br className="brt2" /> процесс</>}</p>
             </li>
-
-
             <a
                     href={`#industrial_robots`}
                     id={styles.li5}

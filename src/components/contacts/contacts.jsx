@@ -43,8 +43,8 @@ export default function Contacts({enLan}) {
                 </h3>
                 <br />
                 <br />
-                <a href="mailto:logistica@povpro.ru">
-                    logistica@povpro.ru
+                <a href="mailto:srtlt-robot@yandex.ru">
+                    srtlt-robot@yandex.ru
                 </a>
                 <a href="tel:+78482555900">
                     +7 (848) 255-59-00

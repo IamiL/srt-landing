@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.advantages_block-main_heading {
+    height: 4.63541666667vw;
+    font-family: var(--font-ablation);
+}
+
 .advantages-list-item-automation_of_work_processes {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -36,6 +41,11 @@
 }
 
 @media only screen and (max-width: 1366px) {
+    .advantages_block-main_heading {
+        height: auto;
+        width: 48.1770833333vw;
+    }
+
     .advantages-list-item-automation_of_work_processes {
         grid-column-start: 1;
         grid-column-end: 5;
@@ -78,6 +88,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .advantages_block-main_heading {
+        width: auto;
+    }
+
     .advantages-list-item-automation_of_work_processes {
         grid-column-start: 1;
         grid-column-end: 4;

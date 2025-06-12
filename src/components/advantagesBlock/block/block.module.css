@@ -1,15 +1,3 @@
-#h2 {
-    height: 4.63541666667vw;
-    font-family: var(--font-ablation);
-}
-
-@media only screen and (max-width: 1366px) {
-    #h2 {
-        height: auto;
-        width: 48.1770833333vw;
-    }
-}
-
 #ul {
     margin-top: 5.91666666667vw;
     /*height: 27.4166666667vw;*/
@@ -159,10 +147,6 @@
     #li3, #li4 {
         grid-row-start: 2;
         grid-row-end: 3;
-    }
-
-    #h2 {
-        width: auto;
     }
 
     #p1 {
