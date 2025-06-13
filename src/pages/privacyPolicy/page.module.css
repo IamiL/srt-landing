@@ -1,0 +1,222 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /*margin-top: 5.2vw;*/
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pageTitle {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.downloadButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.downloadButton:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.downloadIcon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.contentWrapper {
+    border-radius: 1.5625vw;
+    background: linear-gradient(180deg, #fff3, #9999991a);
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.subsection {
+    margin-bottom: 25px;
+}
+
+.subsectionTitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+}
+
+.textContent {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.listItem {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.listItem::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tableContainer {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    overflow-x: auto;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataTable th,
+.dataTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: top;
+}
+
+.dataTable th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.dataTable td {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+}
+
+.contactInfo {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.contactTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.contactText {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 10px;
+}
+
+.emailLink {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.emailLink:hover {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+.highlightBox {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .contentWrapper {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .downloadButton {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.2rem;
+    }
+
+    .dataTable th,
+    .dataTable td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentWrapper {
+        padding: 25px 20px;
+    }
+
+    .pageTitle {
+        font-size: 1.6rem;
+    }
+
+    .downloadButton {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}

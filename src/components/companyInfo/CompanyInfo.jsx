@@ -1,51 +1,58 @@
 import "./CompanyInfo.css"
 
-export default function CompanyInfo({enLan}) {
-    return <section className="company_info">
-        <h2>
-            {enLan ? 'Join Us' :
-                    'Данные о компании'}
-        </h2>
-        <div className='company_info-container base_grid'>
-            <div className='adli company_info-block company_info-block1'>
-                <p className='text4 company_info-p1'>
-                    Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии"
-                </p>
-                <p className='text4'>
-                    ИНН 6320083494
-                </p>
-                <h5 className='text4 company_info-p1'>
-                    Юридический адрес
-                </h5>
-                <p>
-                    445043, Самарская область, г.о. Тольятти, г Тольятти, ул Окраинная, влд. 24, помещ. 202
-                </p>
-                <h5 className='text4 company_info-p1'>
-                    Фактический адрес
-                </h5>
-                <p>
-                    445043, Самарская область, г.о. Тольятти, г Тольятти, ул Окраинная, влд. 24, помещ. 202
-                </p>
-            </div>
-            <div className='adli company_info-block company_info-block2'>
-                <h5 className='text4 company_info-p1'>
-                    Основной код ОКВЭД
-                </h5>
-                <div>
-                    <p>
-                        Разработка компьютерного программного обеспечения
-                    </p>
-                    <p>
-                        Информация о видах ИТ-деятельности согласно Приказу Минцифры России от 11.05.2023 N 449 "Об утверждении перечня видов деятельности в области информационных технологий" (Зарегистрировано в Минюсте России 14.08.2023 N 74778)
-                    </p>
+export default function CompanyInfo() {
+    return <section className="company_info-legal_section">
+        <div className="company_info-legal_block">
+            <h2 className="company_info-legal_title">данные о компании</h2>
+
+            <div className="company_info-legal_content">
+                <div className="legal_column">
+                    <div className="company_info-company-info">
+                        <div className="company_info-company_name">
+                            Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии"
+                        </div>
+
+                        <div className="company_info-inn">
+                            ИНН 6320083494
+                        </div>
+
+                        <div className="company_info-address_block">
+                            <div className="company_info-address_label">Юридический адрес</div>
+                            <div className="company_info-address_text">
+                                445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202
+                            </div>
+                        </div>
+
+                        <div className="company_info-address_block">
+                            <div className="company_info-address_label">Фактический адрес</div>
+                            <div className="company_info-address_text">
+                                445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h5>
-                        Код 1.03
-                    </h5>
-                    <p>
-                        Проектирование и (или) иная деятельность, а также оказание услуг в отношении технологий робототехники и сенсорики, в том числе в области сенсоромоторной координации и пространственного позиционирования, сенсоров и обработки сенсорной информации, интеллектуальных систем управления робототехническими системами, систем автоматизации управления, включая беспилотные воздушные судна и высокоавтоматизированные транспортные средства
-                    </p>
+
+                <div className="company_info_legal_column">
+                    <div className="company_info-okved_section">
+                        <div className="company_info-okved_title">Основной код ОКВЭД</div>
+
+                        <div className="company_info-okved_item">
+                            <div className="company_info-okved_code">62.01</div>
+                            <div className="company_info-okved_description">
+                                Разработка компьютерного программного обеспечения
+                            </div>
+                            <div className="company_info-ministry_info">
+                                Информация о видах ИТ-деятельности согласно Приказу Минцифры России от 11.05.2023 N 449 "Об утверждении перечня видов деятельности в области информационных технологий" (Зарегистрировано в Минюсте России 14.08.2023 N 74778)
+                            </div>
+                        </div>
+
+                        <div className="company_info-okved_item">
+                            <div className="company_info-okved_code">Код 1.03</div>
+                            <div className="company_info-okved_description">
+                                Проектирование и (или) иная деятельность, а также оказание услуг в отношении технологий робототехники и сенсорики, в том числе в области сенсоромоторной координации и пространственного позиционирования, сенсоров и обработки сенсорной информации, интеллектуальных систем управления робототехническими системами, систем автоматизации управления, включая беспилотные воздушные судна и высокоавтоматизированные транспортные средства
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

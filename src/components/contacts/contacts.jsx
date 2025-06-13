@@ -46,8 +46,8 @@ export default function Contacts({enLan}) {
                 <a href="mailto:srtlt-robot@yandex.ru">
                     srtlt-robot@yandex.ru
                 </a>
-                <a href="tel:+78482555900">
-                    +7 (848) 255-59-00
+                <a href="tel:+79276573030">
+                    +7 (927) 657-30-30
                 </a>
                 <a
                         href='https://t.me/+79276573030'

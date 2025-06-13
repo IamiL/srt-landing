@@ -23,6 +23,41 @@ footer::before {
     z-index: -1;
 }
 
+.footer-nav-container {
+    display: flex;
+    margin-top: 1.91667vw;
+}
+
+.footer-privacy_link {
+    display: flex;
+    align-items: center;
+    height: 1.3vw;
+    margin-left: 3vw;
+    position: relative;
+    font-size: 0.85vw;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    font-family: var(--font-inter);
+    /*font-size: 1vw;*/
+    font-weight: 300;
+    line-height: 1.21;
+}
+
+.footer-privacy_link::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-privacy_link:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 @media only screen and (max-width: 767px) {
     footer {
         padding-top: 1.91666666667vw;
