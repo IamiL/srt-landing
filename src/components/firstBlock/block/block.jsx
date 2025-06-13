@@ -45,13 +45,14 @@ export default function FirstBlock({enLan}) {
                     }}
             >
                 {/* Меняем порядок источников - сначала более совместимый */}
-                <source
-                        src="/video.webm"
-                        type="video/webm"
-                />
+
                 <source
                         src="/video.mov"
                         type="video/mp4" // Используем video/mp4 вместо video/quicktime
+                />
+                <source
+                        src="/video.webm"
+                        type="video/webm"
                 />
                 Ваш браузер не поддерживает воспроизведение видео.
             </video>
