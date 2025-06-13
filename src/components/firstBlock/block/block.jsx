@@ -27,8 +27,12 @@ export default function FirstBlock({enLan}) {
                     id="video"
             >
                 <source
-                        src={"/video4.mov"}
+                        src={"/video.mov"}
                         type='video/quicktime'
+                />
+                <source
+                        src={"/video.webm"}
+                        type='video/webm'
                 />
             </video>
             <AutoPlayer />

@@ -56,7 +56,7 @@ const mimeTypes = {
     '.mp4': 'video/mp4',
     '.webm': 'video/webm',
     '.webp': 'image/webp',
-    '.mov': 'video/quicktime',
+    '.mov': 'video/mp4',
 };
 
 const server = http.createServer((req, res) => {
