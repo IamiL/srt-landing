@@ -426,9 +426,16 @@
     transform: translateY(0);
 }
 
+@media (max-width: 1366px) {
+    .feedback_block {
+        border-radius: 3.90625vw;
+    }
+}
+
 @media (max-width: 768px) {
     .feedback_block {
         --feedback_block_unit_of_size: 0.9vw;
+        border-radius: 3.90625vw;
     }
 
     .feedback_block {

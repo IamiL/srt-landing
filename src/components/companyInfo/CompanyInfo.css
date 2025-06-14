@@ -122,9 +122,15 @@
     border-radius: 6px;
 }
 
+@media (max-width: 1366px) {
+    .company_info-legal_block {
+        border-radius: 3.90625vw;
+    }
+}
+
 @media (max-width: 768px) {
     .company_info-legal_section {
-        padding: 0;
+        padding: 60px 0;
     }
 
     .company_info-legal_content {
@@ -134,6 +140,7 @@
 
     .company_info-legal_block {
         padding: 30px 25px;
+        border-radius: 3.90625vw;
     }
 
     .company_info-legal_title {
@@ -152,7 +159,18 @@
     }
 
     .company_info-legal_block {
-        padding: 25px 20px;
+        padding: 25px 10px;
         border-radius: 20px;
+    }
+
+    .company_info-okved_section {
+        padding: 10px;
+        border: none;
+        background: unset;
+    }
+
+    .company_info-okved_item {
+        padding: 15px 0;
+        background: unset;
     }
 }
