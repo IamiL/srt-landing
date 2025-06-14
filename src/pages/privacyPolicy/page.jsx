@@ -26,21 +26,21 @@ export default function PrivacyPolicy({enLan}) {
     return <>
         <main>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <h1 className={styles.pageTitle}>ПОЛИТИКА В ОТНОШЕНИИ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>
-                    <button
-                            className={styles.downloadButton}
-                            onClick="downloadPolicy()"
-                    >
-                        <svg
-                                className={styles.downloadIcon}
-                                viewBox="0 0 24 24"
-                        >
-                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                        </svg>
-                        Скачать документ (.docx)
-                    </button>
-                </div>
+                {/*<div className={styles.header}>*/}
+                {/*    <h1 className={styles.pageTitle}>ПОЛИТИКА В ОТНОШЕНИИ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>*/}
+                {/*    <button*/}
+                {/*            className={styles.downloadButton}*/}
+                {/*            onClick="downloadPolicy()"*/}
+                {/*    >*/}
+                {/*        <svg*/}
+                {/*                className={styles.downloadIcon}*/}
+                {/*                viewBox="0 0 24 24"*/}
+                {/*        >*/}
+                {/*            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />*/}
+                {/*        </svg>*/}
+                {/*        Скачать документ (.docx)*/}
+                {/*    </button>*/}
+                {/*</div>*/}
 
                 <div className={styles.contentWrapper}>
                     <div className={styles.section}>

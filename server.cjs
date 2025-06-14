@@ -53,10 +53,10 @@ const mimeTypes = {
     '.ico': 'image/x-icon',
     '.otf': 'font/opentype',
     '.ttf': 'font/ttf',
-    '.mp4': 'video/mp4',
     '.webm': 'video/webm',
+    '.mp4': 'video/mp4',
+    '.mov': 'video/quicktime',
     '.webp': 'image/webp',
-    '.mov': 'video/mp4',
 };
 
 const server = http.createServer((req, res) => {
