@@ -86,7 +86,7 @@ export default function FeedbackBlock({enLan}) {
                             const newFiles = new Map(oldFiles)
                             // console.log('меняем tgId у элемента файла на ', data.fileId)
                             // // newFiles[fileId] = {name: file.name, size: file.size, isLoad: true, tgId: data.fileId};
-                            // newFiles.set(fileId, {name: file.name, size: file.size, isLoad: true, tgId: data.fileId});
+                            newFiles.set(fileId, {name: file.name, size: file.size, isLoad: true, tgId: data.fileId});
                             // console.log('новый стэйт фалов:')
                             // console.log(newFiles);
                             return newFiles
