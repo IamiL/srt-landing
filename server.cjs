@@ -9,7 +9,7 @@ const axios = require("axios");
 // const TELEGRAM_USER_ID_FIRST = -1002888150428; // Первый канал/чат (хранилище)
 // const TELEGRAM_REQUESTS_CHAT_ID = -1002673909381; // Второй канал/чат (основной)
 
-const TELEGRAM_BOT_TOKEN = '7634754756:AAFbVy0Eujw-rzcfeSvi4sAp1QU74znblXA';
+const TELEGRAM_BOT_TOKEN = '8054114971:AAE-25rC6uj0RX8_jafv0Aj6UD-hICbjxSA';
 const TELEGRAM_USER_ID_FIRST = -1002534280928; // Первый канал/чат (хранилище)
 const TELEGRAM_REQUESTS_CHAT_ID = -1002657965158; // Второй канал/чат (основной)
 
