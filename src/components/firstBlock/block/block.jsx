@@ -29,14 +29,13 @@ export default function FirstBlock({enLan}) {
                     id="video"
                     playsInline
             >
-                {isSafari && <source
+                {isSafari ? <source
                         src={"/video.mov"}
-                        type='video/quicktime'
-                />}
-                <source
+                        type="video/mp4"
+                /> : <source
                         src={"/video.webm"}
                         type='video/webm'
-                />
+                />}
             </video>
             <AutoPlayer />
         </div>
