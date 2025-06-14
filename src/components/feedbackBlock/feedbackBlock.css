@@ -428,6 +428,10 @@
 
 @media (max-width: 768px) {
     .feedback_block {
+        --feedback_block_unit_of_size: 0.9vw;
+    }
+
+    .feedback_block {
         /*padding: 30px 20px;*/
         padding: calc(var(--feedback_block_unit_of_size) * 7.5) calc(var(--feedback_block_unit_of_size) * 5);
     }

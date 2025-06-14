@@ -123,6 +123,10 @@
 }
 
 @media (max-width: 768px) {
+    .company_info-legal_section {
+        padding: 0;
+    }
+
     .company_info-legal_content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -144,7 +148,7 @@
 
 @media (max-width: 480px) {
     .company_info-legal_section {
-        padding: 40px 15px;
+        padding: 40px 0;
     }
 
     .company_info-legal_block {
