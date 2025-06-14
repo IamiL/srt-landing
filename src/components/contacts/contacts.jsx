@@ -101,6 +101,6 @@ export default function Contacts({enLan}) {
                 </a>
             </div>
         </div>
-        <FeedbackBlock />
+        <FeedbackBlock enLan={enLan} />
     </section>
 }

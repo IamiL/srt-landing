@@ -1,33 +1,37 @@
 import "./CompanyInfo.css"
 
-export default function CompanyInfo() {
+export default function CompanyInfo({enLan}) {
     return <section className="company_info-legal_section">
         <div className="company_info-legal_block">
-            <h2 className="company_info-legal_title">данные о компании</h2>
+            <h2 className="company_info-legal_title">{enLan ? 'Company information' : 'данные о компании'}</h2>
 
             <div className="company_info-legal_content">
                 <div className="legal_column">
                     <div className="company_info-company-info">
                         <div className="company_info-company_name">
-                            Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии"
+                            {enLan ? '“Smart Robotic Technologies” LLC.' : 'Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии'}
                         </div>
 
                         <div className="company_info-inn">
-                            ИНН 6320083494
+                            {enLan ? 'TIN: 6320083494' : 'ИНН 6320083494'}
                         </div>
 
                         <div className="company_info-address_block">
-                            <div className="company_info-address_label">Юридический адрес</div>
+                            <div className="company_info-address_label">{enLan ? 'Legal address' : 'Юридический адрес'}</div>
                             <div className="company_info-address_text">
-                                445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202
+                                {enLan ? '445043, Samara region, the city of Togliatti, Togliatti, Okrainnaya str, vld. 24, premises. 202' : '445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202'}
                             </div>
                         </div>
 
                         <div className="company_info-address_block">
-                            <div className="company_info-address_label">Фактический адрес</div>
-                            <div className="company_info-address_text">
-                                445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202
-                            </div>
+                            {!enLan &&
+                                    <>
+                                        <div className="company_info-address_label">Фактический адрес</div>
+                                        <div className="company_info-address_text">
+                                            445043, Самарская область, г.о. Тольятти, г. Тольятти, ул Окраинная, влд. 24, помещ. 202
+                                        </div>
+                                    </>
+                            }
                         </div>
                     </div>
                 </div>

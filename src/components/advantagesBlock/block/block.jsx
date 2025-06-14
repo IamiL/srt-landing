@@ -26,13 +26,13 @@ export default function AdvantagesBlock({enLan}) {
                         className="head1"
                         // id={styles.h11}
                 >
-                    {enLan ? 'Automation of work processes' : 'Автоматизация рабочих процессов'}
+                    {enLan ? 'Workflow Automation' : 'Автоматизация рабочих процессов'}
                 </h3>
                 <p
                         className="text4"
                         // id={styles.p11}
                 >
-                    {enLan ? 'Allows you to perform routine tasks and operations that were previously performed manually using technology and software.' : 'Позволяет выполнять рутинные задачи и операции, которые раньше выполнялись вручную, с помощью технологий и программного обеспечения.'}
+                    {enLan ? 'Enables routine tasks and operations that used to be done manually to be performed using technology and software.' : 'Позволяет выполнять рутинные задачи и операции, которые раньше выполнялись вручную, с помощью технологий и программного обеспечения.'}
                 </p>
             </li>
             <li
@@ -62,7 +62,7 @@ export default function AdvantagesBlock({enLan}) {
                 <p
                         className="text4"
                         id={styles.p11}
-                >{enLan ? 'Our technologies are used in a wide variety of fields, from electronics and pharmaceuticals to industrial and agricultural issues. We ensure quick installation and adaptation to the specifics of your production, while maintaining the highest quality of work performed.' : 'Наши технологии применяются в самых разных направлениях — от электроники и фармацевтики до проблем промышленности и сельского хозяйства. Мы обеспечиваем быструю установку и адаптацию под особенности вашего производства, сохраняя высочайшее качество выполняемых работ.'}</p>
+                >{enLan ? 'Our technologies are used in a wide range of applications, from electronics and pharmaceuticals to industrial and agricultural challenges. We provide fast installation and customization for your production, while maintaining the highest quality of the work performed.' : 'Наши технологии применяются в самых разных направлениях — от электроники и фармацевтики до проблем промышленности и сельского хозяйства. Мы обеспечиваем быструю установку и адаптацию под особенности вашего производства, сохраняя высочайшее качество выполняемых работ.'}</p>
             </li>
             <li
                     // id={styles.li2}
@@ -99,7 +99,7 @@ export default function AdvantagesBlock({enLan}) {
                 <p
                         className="text4"
                         id={styles.p33}
-                >{enLan ? 'Reducing staff costs and training, as well as reducing production costs to increase the volume and quality of products.' : <>Сокращение
+                >{enLan ? 'Reduce personnel costs and training, and lower production costs to increase volume and quality of output.' : <>Сокращение
                     затрат на<br /> персонал<br className="brt1" /> и его
                     <br className="brt4" /> обучение,<br className="brt5" /> а также<br
                             className="brt6"
@@ -122,7 +122,7 @@ export default function AdvantagesBlock({enLan}) {
                 <p
                         className="text4"
                         id={styles.p44}
-                >{enLan ? 'Our technologies ensure production stability, even in the absence or shortage of highly qualified personnel.' :
+                >{enLan ? 'Our technology allows us to ensure stable production even when highly skilled personnel are scarce or unavailable. Our automation solutions do not need vacation or time off and are independent of human error.' :
                         <>Наши
                             технологии позволяют<br className="brt4" /> обеспечить стабильность производства даже при<br /> нехватке или
                             <br className="brt4" /> отсутствии <span id={styles.span1}> высококвалифицированного </span><span id={styles.span2}> высококвалифицирован- ного </span> персонала. Нашим решениям по автоматизации не нужны отпуск или выходной, и они независимы от человеческого фактора.</>}</p>

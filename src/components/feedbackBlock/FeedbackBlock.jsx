@@ -3,7 +3,7 @@ import {Fragment, React, useState} from "react";
 import axios from "axios";
 
 
-export default function FeedbackBlock() {
+export default function FeedbackBlock({enLan}) {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -41,7 +41,11 @@ export default function FeedbackBlock() {
         selectedFiles.forEach(file => {
             console.log('попытка загрузки файла - ', file.name);
             if (file.size > maxFileSize) {
-                showMessage(`Файл "${file.name}" превышает максимальный размер 50 МБ`, 'error');
+                if (enLan) {
+                    showMessage(`The file "${file.name}" exceeds the maximum size of 50 MB`, 'error');
+                } else {
+                    showMessage(`Файл "${file.name}" превышает максимальный размер 50 МБ`, 'error');
+                }
                 return;
             }
 
@@ -51,10 +55,10 @@ export default function FeedbackBlock() {
             // Создаем FormData объект для отправки файла
             const formData = new FormData();
             formData.append('file', file); // Используем более стандартное имя поля
-            console.log('FormData содержимое:');
-            for (let [key, value] of formData.entries()) {
-                console.log(key, value);
-            }
+            // console.log('FormData содержимое:');
+            // for (let [key, value] of formData.entries()) {
+            //     console.log(key, value);
+            // }
 
 
             // Отправляем файл на сервер
@@ -65,9 +69,13 @@ export default function FeedbackBlock() {
                     .then(response => {
                         if (!response.ok) {
                             console.log('Ошибка при загрузке файла на сервер (код ответа не ок)')
-                            throw new Error('Ошибка при загрузке файла на сервер');
+                            if (enLan) {
+                                throw new Error('Error uploading file to server');
+                            } else {
+                                throw new Error('Ошибка при загрузке файла на сервер');
+                            }
                         } else {
-                            console.log('с ответом от сервера на загрузку файла всё ок');
+                            // console.log('с ответом от сервера на загрузку файла всё ок');
                         }
                         return response.json();
                     })
@@ -76,11 +84,11 @@ export default function FeedbackBlock() {
 
                         setFiles((oldFiles) => {
                             const newFiles = new Map(oldFiles)
-                            console.log('меняем tgId у элемента файла на ', data.fileId)
-                            // newFiles[fileId] = {name: file.name, size: file.size, isLoad: true, tgId: data.fileId};
-                            newFiles.set(fileId, {name: file.name, size: file.size, isLoad: true, tgId: data.fileId});
-                            console.log('новый стэйт фалов:')
-                            console.log(newFiles);
+                            // console.log('меняем tgId у элемента файла на ', data.fileId)
+                            // // newFiles[fileId] = {name: file.name, size: file.size, isLoad: true, tgId: data.fileId};
+                            // newFiles.set(fileId, {name: file.name, size: file.size, isLoad: true, tgId: data.fileId});
+                            // console.log('новый стэйт фалов:')
+                            // console.log(newFiles);
                             return newFiles
                         });
 
@@ -92,7 +100,12 @@ export default function FeedbackBlock() {
                             newFiles.delete(fileId)
                             return newFiles
                         });
-                        showMessage('Ошибка при загрузке файла', 'error');
+                        if (enLan) {
+                            showMessage('Error loading file', 'error');
+                        } else {
+                            showMessage('Ошибка при загрузке файла', 'error');
+                        }
+                        // showMessage('Ошибка при загрузке файла', 'error');
                     });
         });
     };
@@ -125,39 +138,67 @@ export default function FeedbackBlock() {
 
         // Проверка имени
         if (!formData.name.trim()) {
-            errors.push('Поле "Имя" обязательно для заполнения');
+            if (enLan) {
+                errors.push('The “Name” field is required');
+            } else {
+                errors.push('Поле "Имя" обязательно для заполнения');
+            }
             newFieldErrors.add('name');
         }
 
         // Проверка телефона
         if (!formData.phone.trim()) {
-            errors.push('Поле "Телефон" обязательно для заполнения');
+            if (enLan) {
+                errors.push('The “Phone” field is required');
+            } else {
+                errors.push('Поле "Телефон" обязательно для заполнения');
+            }
             newFieldErrors.add('phone');
         }
 
         // Проверка email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!formData.email.trim()) {
-            errors.push('Поле "Email" обязательно для заполнения');
+            if (enLan) {
+                errors.push('The “Email” field is required');
+            } else {
+                errors.push('Поле "Email" обязательно для заполнения');
+            }
             newFieldErrors.add('email');
         } else if (!emailRegex.test(formData.email)) {
-            errors.push('Введите корректный email адрес');
+            if (enLan) {
+                errors.push('Enter a valid email address');
+            } else {
+                errors.push('Введите корректный email адрес');
+            }
             newFieldErrors.add('email');
         }
 
         // Проверка описания
         if (!formData.description.trim()) {
-            errors.push('Поле "Описание проблемы" обязательно для заполнения');
+            if (enLan) {
+                errors.push('The “Problem description” field is required');
+            } else {
+                errors.push('Поле "Описание проблемы" обязательно для заполнения');
+            }
             newFieldErrors.add('description');
         } else if (formData.description.length > 2000) {
-            errors.push('Описание проблемы не должно превышать 2000 символов');
+            if (enLan) {
+                errors.push('The description of the problem should not exceed 2000 characters');
+            } else {
+                errors.push('Описание проблемы не должно превышать 2000 символов');
+            }
             newFieldErrors.add('description');
         }
 
         // Проверка загрузки всех файлов
         const hasUnloadedFiles = Array.from(files.values()).some(file => file.isLoad === false);
         if (hasUnloadedFiles) {
-            errors.push('Дождитесь загрузки всех файлов');
+            if (enLan) {
+                errors.push('Wait until all files are downloaded.');
+            } else {
+                errors.push('Дождитесь загрузки всех файлов');
+            }
         }
 
         setFieldErrors(newFieldErrors);
@@ -223,7 +264,11 @@ export default function FeedbackBlock() {
             })
                     .then(response => {
                         console.log('код ответа: ', response.status, 'ответ:', response.data);
-                        showMessage('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.', 'success')
+                        if (enLan) {
+                            showMessage('Your message has been sent successfully! We will contact you shortly.', 'success')
+                        } else {
+                            showMessage('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.', 'success')
+                        }
                         setFormData({
                             name: '',
                             phone: '',
@@ -235,7 +280,11 @@ export default function FeedbackBlock() {
                         setRequestIsLoading(false)
                     })
                     .catch(error => {
-                        showMessage('Ошибка отправки 🤔.', 'error')
+                        if (enLan) {
+                            showMessage('Sending error 🤔.', 'error')
+                        } else {
+                            showMessage('Ошибка отправки 🤔.', 'error')
+                        }
                         console.error('Ошибка! - ', error.message);
                         setRequestIsLoading(false)
                     });
@@ -279,7 +328,7 @@ export default function FeedbackBlock() {
                                     type='text'
                                     id='name'
                                     name='name'
-                                    placeholder='Ваше имя *'
+                                    placeholder={enLan ? 'Name *' : 'Ваше имя *'}
                                     // autoComplete='name'
                                     value={formData.name}
                                     onChange={handleInputChange}
@@ -292,7 +341,7 @@ export default function FeedbackBlock() {
                                     type="tel"
                                     id='phone'
                                     name='phone'
-                                    placeholder='Телефон *'
+                                    placeholder={enLan ? 'Phone *' : 'Телефон *'}
                                     // autoComplete='tel'
                                     value={formData.phone}
                                     onChange={handleInputChange}
@@ -318,7 +367,7 @@ export default function FeedbackBlock() {
                             <textarea
                                     id='description'
                                     name='description'
-                                    placeholder='Описание проблемы или вопроса *'
+                                    placeholder={enLan ? 'Brief description of the question/problem' : 'Описание проблемы или вопроса *'}
                                     value={formData.description}
                                     onChange={handleInputChange}
                                     maxLength="2000"
@@ -367,11 +416,11 @@ export default function FeedbackBlock() {
                                         y2="3"
                                 ></line>
                             </svg>
-                            Прикрепить файлы
+                            {enLan ? 'Attach a file' : 'Прикрепить файлы'}
                         </label>
                         <div className="feedback_block-form-file_upload-text">
                             {/*Поддерживаемые форматы: изображения, PDF, DOC, TXT, ZIP<br />*/}
-                            Максимальный размер файла: 50 МБ
+                            {enLan ? 'Maximum file size: 50 MB' : 'Максимальный размер файла: 50 МБ'}
                         </div>
                         <div
                                 className="feedback_block-form-file_upload-uploaded_files"
@@ -409,7 +458,7 @@ export default function FeedbackBlock() {
                                                                         className={`feedback_block-form-file_upload-uploaded_files-item-status ${file.isLoad ?
                                                                                 'feedback_block-form-file_upload-uploaded_files-item-status-loaded' :
                                                                                 'feedback_block-form-file_upload-uploaded_files-item-status-loading'}`}
-                                                                >{file.isLoad ? 'Загружен' : 'Загружается...'}</div>
+                                                                >{enLan ? file.isLoad ? 'Uploaded' : 'Is loading...' : file.isLoad ? 'Загружен' : 'Загружается...'}</div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -419,7 +468,7 @@ export default function FeedbackBlock() {
                                                             onClick={() => removeFile(fileId)}
                                                             className='feedback_block-form-file_upload-uploaded_files-item-remove'
                                                     >
-                                                        Удалить
+                                                        {enLan ? 'Delete' : 'Удалить'}
                                                     </button>
                                                 </div>
                                         ))}
@@ -447,7 +496,7 @@ export default function FeedbackBlock() {
                             className="feedback_block-form-submit_btn"
                             disabled={requestIsLoading}
                     >
-                        {requestIsLoading ? 'Отправляем...' : 'Отправить сообщение'}
+                        {enLan ? requestIsLoading ? 'Sending...' : 'Send message' : requestIsLoading ? 'Отправляем...' : 'Отправить сообщение'}
                     </button>
                 </form>
             </div>
