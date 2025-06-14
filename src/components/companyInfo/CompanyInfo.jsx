@@ -9,7 +9,7 @@ export default function CompanyInfo({enLan}) {
                 <div className="legal_column">
                     <div className="company_info-company-info">
                         <div className="company_info-company_name">
-                            {enLan ? '“Smart Robotic Technologies” LLC.' : 'Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии'}
+                            {enLan ? '“Smart Robotic Technologies” LLC.' : 'Общество с ограниченной ответственностью "Интеллектуальные Роботизированные Технологии"'}
                         </div>
 
                         <div className="company_info-inn">

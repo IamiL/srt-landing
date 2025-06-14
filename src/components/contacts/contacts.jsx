@@ -59,7 +59,7 @@ export default function Contacts({enLan}) {
                             viewBox="0 0 24 24"
                             width="96"
                             height="96"
-                            color="#ffffff"
+                            // color="#ffffff"
                             fill="none"
                     >
                         <path

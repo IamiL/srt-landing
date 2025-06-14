@@ -7,10 +7,12 @@ export default function Footer({enLan}) {
     return <footer>
         <div id={styles.footer}>
             <div id={styles.logo}>
-                <img
-                        src={enLan ? '/footerEnLogo.svg' : '/footerRuLogo.svg'}
-                        alt="footerLogo"
-                />
+                <Link to="/">
+                    <img
+                            src={enLan ? '/footerEnLogo.svg' : '/footerRuLogo.svg'}
+                            alt="footerLogo"
+                    />
+                </Link>
             </div>
             <a href="mailto:srtlt-robot@yandex.ru">
                 srtlt-robot@yandex.ru

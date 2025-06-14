@@ -17,6 +17,20 @@
     font-size: 2vw;
     font-weight: 900;
     line-height: 1.3;
+    transition: color 0.3s;
+}
+
+#contacts_list > a:hover, #contacts_list > a > svg > path {
+    transition: stroke 0.3s;
+}
+
+/*#contacts_list > a > svg > path {*/
+/*    stroke: #86A2FF !important;*/
+/*}*/
+
+#contacts_list > a:hover, #contacts_list > a:hover > svg > path {
+    color: #86A2FF;
+    stroke: #86A2FF;
 }
 
 

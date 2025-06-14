@@ -1,7 +1,7 @@
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    /*margin-top: 5.2vw;*/
+    margin-top: 5vw;
     padding: 40px 20px;
 }
 
@@ -16,6 +16,7 @@
     margin-bottom: 30px;
     color: #ffffff;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .downloadButton {

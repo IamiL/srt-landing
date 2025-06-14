@@ -9,7 +9,12 @@
     font-size: 1vw;
     font-weight: 300;
     line-height: 1.21;
-    font-style: normal
+    font-style: normal;
+    transition: color 0.3s;
+}
+
+#nav a:hover {
+    color: #86A2FF;
 }
 
 #nav1 {
@@ -31,8 +36,8 @@
 
 @media only screen and (max-width: 1366px) {
 
-#nav {
-    display: none;
-}
+    #nav {
+        display: none;
+    }
 
 }
