@@ -3,9 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const formidable = require("formidable");
 
+// const TELEGRAM_BOT_TOKEN = '7634754756:AAFbVy0Eujw-rzcfeSvi4sAp1QU74znblXA';
+// const TELEGRAM_USER_ID_FIRST = -1002888150428; // Первый канал/чат (хранилище)
+// const TELEGRAM_REQUESTS_CHAT_ID = -1002673909381; // Второй канал/чат (основной)
+
 const TELEGRAM_BOT_TOKEN = '7634754756:AAFbVy0Eujw-rzcfeSvi4sAp1QU74znblXA';
-const TELEGRAM_USER_ID_FIRST = -1002888150428; // Первый канал/чат (хранилище)
-const TELEGRAM_REQUESTS_CHAT_ID = -1002673909381; // Второй канал/чат (основной)
+const TELEGRAM_USER_ID_FIRST = -1002534280928; // Первый канал/чат (хранилище)
+const TELEGRAM_REQUESTS_CHAT_ID = -1002657965158; // Второй канал/чат (основной)
 
 // Утилиты для логирования
 const getTimestamp = () => new Date().toISOString();
@@ -254,10 +258,12 @@ const server = http.createServer((req, res) => {
 
     if (req.url === '/api/file' && req.method === 'POST') {
         console.log("отправка файла");
+        return;
     }
-    
+
     if (req.url === '/api/application' && req.method === 'POST') {
         console.log("отправка формы");
+        return
     }
 
     const requestStartTime = Date.now();
