@@ -1,19 +1,9 @@
 import styles from './block.module.css';
 import AutoPlayer from "./AutoPlayer/AutoPlayer.jsx";
-import {useState} from "react";
 
 export default function FirstBlock({enLan}) {
-    const [videoError, setVideoError] = useState(false);
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    const handleVideoError = () => {
-        console.warn('Ошибка загрузки видео');
-        setVideoError(true);
-    };
-
-    const handleVideoLoad = () => {
-        console.log('Видео успешно загружено');
-        setVideoError(false);
-    };
     return <div
             id={styles.block1}
             className="base_grid"
@@ -32,28 +22,21 @@ export default function FirstBlock({enLan}) {
         </h1>
         <div id={styles.video}>
             <video
+                    loop
                     height="100%"
                     autoPlay
-                    loop
                     muted
-                    playsInline // Важно для iOS Safari
                     id="video"
-                    onError={handleVideoError}
-                    onLoadedData={handleVideoLoad}
-                    // style={{backgroundColor: videoError ? 'transparent' : 'initial' }}
+                    playsInline
             >
-                {/* Меняем порядок источников - сначала более совместимый */}
-
-
+                {isSafari && <source
+                        src={"/video.mov"}
+                        type='video/quicktime'
+                />}
                 <source
-                        src="/video.mov"
-                        type="video/mp4"
+                        src={"/video.webm"}
+                        type='video/webm'
                 />
-                {/*<source*/}
-                {/*        src="/video.webm"*/}
-                {/*        type="video/webm"*/}
-                {/*/>*/}
-                Ваш браузер не поддерживает воспроизведение видео.
             </video>
             <AutoPlayer />
         </div>
