@@ -32,28 +32,27 @@ export default function FirstBlock({enLan}) {
         </h1>
         <div id={styles.video}>
             <video
-                    loop
                     height="100%"
                     autoPlay
+                    loop
                     muted
                     playsInline // Важно для iOS Safari
                     id="video"
                     onError={handleVideoError}
                     onLoadedData={handleVideoLoad}
-                    style={{
-                        backgroundColor: videoError ? 'transparent' : 'initial'
-                    }}
+                    // style={{backgroundColor: videoError ? 'transparent' : 'initial' }}
             >
                 {/* Меняем порядок источников - сначала более совместимый */}
 
+
                 <source
                         src="/video.mov"
-                        type="video/mp4" // Используем video/mp4 вместо video/quicktime
+                        type="video/mp4"
                 />
-                <source
-                        src="/video.webm"
-                        type="video/webm"
-                />
+                {/*<source*/}
+                {/*        src="/video.webm"*/}
+                {/*        type="video/webm"*/}
+                {/*/>*/}
                 Ваш браузер не поддерживает воспроизведение видео.
             </video>
             <AutoPlayer />
