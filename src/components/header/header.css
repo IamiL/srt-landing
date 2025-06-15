@@ -5,6 +5,32 @@ header {
     z-index: 3;
 }
 
+.nav_menu_start_animated {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideInFromTop 1s ease-out 0.8s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideInFromTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-main-logo-start-animation {
+    opacity: 0;
+    animation: fadeInImmediate 0.5s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeInImmediate {
+    to {
+        opacity: 1;
+    }
+}
+
 .nav_menu {
     grid-column-start: 5;
     grid-column-end: 13;

@@ -19,12 +19,32 @@
     /*margin-top: 7.91666666667vw;*/
     grid-column-start: 1;
     grid-column-end: -5;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInFromBottom 1s ease-out 1.2s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideInFromBottom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #block1 > h1 {
     margin-top: 3.95833333333vw;
     grid-column-start: 1;
     grid-column-end: -5;
+    opacity: 0;
+    animation: fadeInImmediate 0.8s ease-out 0.2s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeInImmediate {
+    to {
+        opacity: 1;
+    }
 }
 
 #video {
