@@ -9,7 +9,7 @@ lerna-debug.log*
 
 bundle
 node_modules
-dist
+#dist
 dist-ssr
 *.local
 

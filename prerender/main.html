@@ -61,7 +61,7 @@
             animation-duration: 2.5s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
-            overflow-y: hidden;
+            /*overflow-y: hidden;*/
         }
 
         @keyframes bl {
@@ -94,6 +94,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            animation-timing-function: ease-out;
         }
 
         @keyframes load {
@@ -250,7 +251,26 @@
                 transform: rotate(180deg)
             }
         }
+
+        #main_prerender {
+            z-index: -10;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /*max-height: 100%;*/
+            max-width: 100%;
+        }
     </style>
+    <script
+            crossorigin
+            src="/assets/index-Deqyac-y.js"
+            type="module"
+    ></script>
+    <link
+            crossorigin
+            href="/assets/index-DREVdldv.css"
+            rel="stylesheet"
+    >
 </head>
 <body class="start">
 <div class="loading">
@@ -349,8 +369,18 @@
             loadingElements.forEach(element => {
                 element.style.display = "none";
             });
-            document.body.style.overflowY = "visible";
-        }, 1500);
+            if (!window.location.hash) {
+                // Если якоря нет, скроллим наверх страницы
+                window.scrollTo({
+                    top: 0,
+                    // behavior: 'smooth' // плавный скролл
+                });
+
+                // Альтернативный способ без плавности:
+                // window.scrollTo(0, 0);
+            }
+            // document.body.style.overflowY = "visible";
+        }, 2500);
     });
 </script>
 <div id="root"></div>
@@ -1499,10 +1529,6 @@
         </div>
     </footer>
 </div>
-<script
-        src="/src/main.jsx"
-        type="module"
-></script>
-
 </body>
 </html>
+
