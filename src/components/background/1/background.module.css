@@ -23,7 +23,7 @@
     height: 80vw;
     overflow: visible;
     z-index: -1;
-    top: 82.677083333vw;
+    top: 105vw;
     left: 15.2vw;
     /*background: rgba(134, 162, 255, 0.6);*/
 }
@@ -61,7 +61,7 @@
     height: 90vw;
     overflow: visible;
     z-index: -1;
-    top: 230.567651633vw;
+    top: 253vw;
     left: 0;
     /*background: rgba(134, 162, 255, 0.6);*/
 }
@@ -105,7 +105,7 @@
     height: 90vw;
     overflow: hidden;
     z-index: -1;
-    top: 280vw;
+    top: 300vw;
     right: 0;
     /*background: rgba(134, 162, 255, 0.6);*/
 }
@@ -256,7 +256,7 @@
     height: 90vw;
     overflow: hidden;
     z-index: -1;
-    top: 380vw;
+    top: 410vw;
     right: 0;
     /*background: rgba(134, 162, 255, 0.6);*/
 }

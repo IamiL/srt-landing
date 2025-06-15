@@ -90,6 +90,10 @@ body {
 /*    }*/
 /*}*/
 
+#main_prerender {
+    visibility: hidden;
+}
+
 main {
     display: flex;
     flex-direction: column;
