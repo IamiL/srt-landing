@@ -8,8 +8,8 @@ header {
 .nav_menu_start_animated {
     opacity: 0;
     transform: translateY(-30px);
-    animation: slideInFromTop 1s ease-out 0.8s forwards;
-    animation-delay: 2s;
+    animation: slideInFromTop 0.7s ease-out 0.8s forwards;
+    animation-delay: 2.5s;
 }
 
 @keyframes slideInFromTop {
@@ -22,7 +22,7 @@ header {
 .header-main-logo-start-animation {
     opacity: 0;
     animation: fadeInImmediate 0.5s ease-out forwards;
-    animation-delay: 2s;
+    animation-delay: 2.1s;
 }
 
 @keyframes fadeInImmediate {

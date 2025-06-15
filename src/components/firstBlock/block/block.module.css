@@ -21,11 +21,11 @@
     grid-column-end: -5;
 }
 
-.main-section-text-start-animation {
+.mainSectionTextStartAnimation {
     opacity: 0;
     transform: translateY(30px);
-    animation: slideInFromBottom 1s ease-out 1.2s forwards;
-    animation-delay: 2s;
+    animation: slideInFromBottom 0.7s ease-out 1.2s forwards;
+    animation-delay: 2.5s;
 }
 
 @keyframes slideInFromBottom {
@@ -41,10 +41,10 @@
     grid-column-end: -5;
 }
 
-.main-section-heading-start-animation {
+.mainSectionHeadingStartAnimation {
     opacity: 0;
     animation: fadeInImmediate 0.8s ease-out 0.2s forwards;
-    animation-delay: 2s;
+    animation-delay: 2.1s;
 }
 
 @keyframes fadeInImmediate {

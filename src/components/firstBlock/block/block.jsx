@@ -11,7 +11,7 @@ export default function FirstBlock({enLan}) {
             id={styles.block1}
             className="base_grid"
     >
-        <h1 className={isActive ? 'main-section-heading-start-animation' : ''}>
+        <h1 className={isActive ? styles.mainSectionHeadingStartAnimation : ''}>
             {enLan ?
                     // <>
                     //     SRT <span
@@ -28,7 +28,10 @@ export default function FirstBlock({enLan}) {
                         Автоматизация <br />рабочих процессов <br />на вашем производстве
                     </>}
         </h1>
-        <div id={styles.video}>
+        <div
+                id={styles.video}
+                className={isActive ? styles.mainSectionHeadingStartAnimation : ''}
+        >
             <video
                     loop
                     height="100%"
@@ -47,6 +50,6 @@ export default function FirstBlock({enLan}) {
             </video>
             <AutoPlayer />
         </div>
-        <p className={`text1 ${isActive ? 'main-section-text-start-animation' : ''}`}>{enLan ? 'On time. Quality. Contract.' : 'Точно в срок. Качество. Договор.'}</p>
+        <p className={`text1 ${isActive ? styles.mainSectionTextStartAnimation : ''}`}>{enLan ? 'On time. Quality. Contract.' : 'Точно в срок. Качество. Договор.'}</p>
     </div>
 }
