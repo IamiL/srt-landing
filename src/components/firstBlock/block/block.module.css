@@ -19,6 +19,9 @@
     /*margin-top: 7.91666666667vw;*/
     grid-column-start: 1;
     grid-column-end: -5;
+}
+
+.main-section-text-start-animation {
     opacity: 0;
     transform: translateY(30px);
     animation: slideInFromBottom 1s ease-out 1.2s forwards;
@@ -36,6 +39,9 @@
     margin-top: 3.95833333333vw;
     grid-column-start: 1;
     grid-column-end: -5;
+}
+
+.main-section-heading-start-animation {
     opacity: 0;
     animation: fadeInImmediate 0.8s ease-out 0.2s forwards;
     animation-delay: 2s;

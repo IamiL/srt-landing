@@ -1,14 +1,17 @@
 import styles from './block.module.css';
 import AutoPlayer from "./AutoPlayer/AutoPlayer.jsx";
+import {useTimer} from "../../timerContext/timerContext.jsx";
+
 
 export default function FirstBlock({enLan}) {
+    const {isActive} = useTimer();
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
     return <div
             id={styles.block1}
             className="base_grid"
     >
-        <h1>
+        <h1 className={isActive ? 'main-section-heading-start-animation' : ''}>
             {enLan ?
                     // <>
                     //     SRT <span
@@ -44,6 +47,6 @@ export default function FirstBlock({enLan}) {
             </video>
             <AutoPlayer />
         </div>
-        <p className="text1">{enLan ? 'On time. Quality. Contract.' : 'Точно в срок. Качество. Договор.'}</p>
+        <p className={`text1 ${isActive ? 'main-section-text-start-animation' : ''}`}>{enLan ? 'On time. Quality. Contract.' : 'Точно в срок. Качество. Договор.'}</p>
     </div>
 }
