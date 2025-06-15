@@ -6,7 +6,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function Cases({enLan}) {
-    document.title = `${enLan ? 'IRT — Our works' : 'ИРТ - Наши работы'}`
+    document.title = `${enLan ? 'Examples of production automation and equipment modernization | IRT' : 'Примеры автоматизации производства и модернизации оборудования | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function Cases({enLan}) {
             }, 0);
         }
     }, [pathname, hash, key]);
-    
+
     return (
             <>
                 <main>

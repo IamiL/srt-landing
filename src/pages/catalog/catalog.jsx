@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function CatalogPage({enLan}) {
-    document.title = `${enLan ? 'IRT — Catalog' : 'ИРТ - Каталог'}`
+    document.title = `${enLan ? 'Industrial equipment: crushers, drying cabinets | IRT' : 'Промышленное оборудование: дробилки, сушильные шкафы | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {
@@ -22,6 +22,6 @@ export default function CatalogPage({enLan}) {
             }, 0);
         }
     }, [pathname, hash, key]);
-    
+
     return <Catalog enLan={enLan} />
 }

@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function RotaryCrusherPage({enLan}) {
-    document.title = `${enLan ? 'IRT — Rotary Crusher' : 'ИРТ - Дробилка роторная'}`
+    document.title = `${enLan ? 'Rotary crushers for industry | IRT' : 'Роторные дробилки для промышленности | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {

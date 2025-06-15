@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function IsolatorsPage({enLan}) {
-    document.title = `${enLan ? 'IRT — Isolators' : 'ИРТ - Изоляторы'}`
+    document.title = `${enLan ? 'Ceramic insulators for heating elements | IRT' : 'Керамические изоляторы для нагревательных элементов | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {

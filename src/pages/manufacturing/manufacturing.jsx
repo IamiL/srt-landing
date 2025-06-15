@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function Manufacturing({enLan}) {
-    document.title = `${enLan ? 'IRT — Manufacturing' : 'ИРТ - Производство'}`
+    document.title = `${enLan ? 'In-house production of automation equipment | IRT' : 'Собственное производство оснастки для автоматизации | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {

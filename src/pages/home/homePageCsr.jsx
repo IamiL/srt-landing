@@ -1,11 +1,10 @@
-
 import Home from "./home.jsx";
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
 export default function HomePageCsr({enLan}) {
 
-    document.title = `${enLan ? 'IRT — Robotic technologies' : 'ИРТ - Роботизированные технологии'}`
+    document.title = `${enLan ? 'Production automation and industrial robots | IRT' : 'Автоматизация производства и промышленные роботы | ИРТ'}`
     const {pathname, hash, key} = useLocation();
 
     useEffect(() => {
@@ -24,5 +23,5 @@ export default function HomePageCsr({enLan}) {
             }, 0);
         }
     }, [pathname, hash, key]);
-    return <Home enLan={enLan}/>
+    return <Home enLan={enLan} />
 }
