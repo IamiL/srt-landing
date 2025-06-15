@@ -1,17 +1,17 @@
-@font-face {
-    font-family: 'Ablation';
-    src: url('/Ablation.otf') format('opentype');
-}
+/*@font-face {*/
+/*    font-family: 'Ablation';*/
+/*    src: url('/Ablation.otf') format('opentype');*/
+/*}*/
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/Inter.ttf') format('truetype');
-}
+/*@font-face {*/
+/*    font-family: 'Inter';*/
+/*    src: url('/Inter.ttf') format('truetype');*/
+/*}*/
 
-@font-face {
-    font-family: 'SFProDisplay';
-    src: url('/SF-Pro-Display-Light.otf') format('opentype');
-}
+/*@font-face {*/
+/*    font-family: 'SFProDisplay';*/
+/*    src: url('/SF-Pro-Display-Light.otf') format('opentype');*/
+/*}*/
 
 html {
     --font-sfPro: 'SFProDisplay', Helvetica, sans-serif;

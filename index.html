@@ -15,8 +15,47 @@
             content="#3E456C"
             name="theme-color"
     >
+    <link
+            as="font"
+            crossorigin
+            href="/Ablation.otf"
+            rel="preload"
+            type="font/otf"
+    >
+    <link
+            as="font"
+            crossorigin
+            href="/Inter.ttf"
+            rel="preload"
+            type="font/ttf"
+    >
+    <link
+            as="font"
+            crossorigin
+            href="/SF-Pro-Display-Light.otf"
+            rel="preload"
+            type="font/otf"
+    >
     <title>ИРТ - Роботизированные технологии</title>
     <style>
+        @font-face {
+            font-family: 'Ablation';
+            src: url('/Ablation.otf') format('opentype');
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('/Inter.ttf') format('truetype');
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: 'SFProDisplay';
+            src: url('/SF-Pro-Display-Light.otf') format('opentype');
+            font-display: block;
+        }
+
         .start {
             animation-name: bl;
             animation-duration: 2.5s;
