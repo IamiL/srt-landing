@@ -17,6 +17,7 @@
     grid-column-end: 13;
     text-align: start;
     margin-top: 0.46875vw;
+    /*padding-right: 2vw;*/
 }
 
 @media only screen and (max-width: 1366px) {

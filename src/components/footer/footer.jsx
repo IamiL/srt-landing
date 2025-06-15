@@ -29,7 +29,7 @@ export default function Footer({enLan}) {
                         to="/policy"
                         className="footer-privacy_link"
                 >
-                    Политика конфиденциальности
+                    {enLan ? 'Privacy Policy' : 'Политика конфиденциальности'}
                 </Link>
             </div>
         </div>

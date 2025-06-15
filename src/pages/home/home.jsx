@@ -15,7 +15,7 @@ export default function Home({enLan}) {
                     <CapabilitiesBlock enLan={enLan} />
                     <IndustrialRobotsBlock enLan={enLan} />
                     <Contacts enLan={enLan} />
-                    <CompanyInfo />
+                    <CompanyInfo enLan={enLan} />
                 </main>
                 <Background1 />
             </>

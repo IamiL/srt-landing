@@ -20,7 +20,7 @@
     transition: color 0.3s;
 }
 
-#contacts_list > a:hover, #contacts_list > a > svg > path {
+#contacts_list > a > svg > path {
     transition: stroke 0.3s;
 }
 
